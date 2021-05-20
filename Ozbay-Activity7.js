@@ -1,15 +1,12 @@
 var names = ["Ben", "Joel", "Judy", "Anne"];
 var scores = [88, 98, 77, 88];
 
-var average;
-var total = 0;
-var highestScore = 0;
-var name = "";
-
 var $ = function (id) {
     return document.getElementById(id);
 };
 
+
+// addScore Function
 var addScore = function () {
     
     if($("name").value==""){
@@ -31,6 +28,7 @@ var addScore = function () {
 	   
 };
 
+// displayResults Function
 var displayResults = function () {
 
     $("results");
@@ -48,27 +46,11 @@ var displayResults = function () {
     };
     var avg = sum/scores.length;
     
-    //average = parseInt(sum/scores.length);
     $("results_header").innerHTML = ("Results");
     $("results_text").innerHTML = ("\nAverage score is " + avg + "<br>" + "\nHigh score = " + name + " with a score of " + high);
 };
 
-
-/*var displayScores = function() {
-
-    $("scores_header").innerHTML = ("Score");
-    $("names").innerHTML = ("Name");
-    $("scores").innerHTML = ("Scores");
-    var table = $("scores_table");
-    for(var i=0; i < names.length;i++) {
-      var row = table.insertRow(table.rows.length);
-      var cell = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      cell.innerHTML = names[i];
-      cell2.innerHTML = scores[i];
-    }
-  };*/
-
+// displayScores Function
   var  displayScores = function() {
 
     $("scores_header").innerHTML = ("Scores");
