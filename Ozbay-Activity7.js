@@ -71,6 +71,7 @@ var displayResults = function () {
 
   var  displayScores = function() {
 
+    $("scores_header").innerHTML = ("Scores");
     var str = "<table>";
     str += "<tr align='left'><th>Name</th><th>Score</th></tr>";
     
