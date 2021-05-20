@@ -56,8 +56,8 @@ var displayResults = function () {
 
 var displayScores = function() {
 
-    $("scores_header").innerHTML = ("Scores");
-    $("names").innerHTML = ("Names");
+    $("scores_header").innerHTML = ("Score");
+    $("names").innerHTML = ("Name");
     $("scores").innerHTML = ("Scores");
     var table = $("scores_table");
     for(var i=0; i < names.length;i++) {
