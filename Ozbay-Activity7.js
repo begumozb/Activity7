@@ -54,7 +54,7 @@ var displayResults = function () {
 };
 
 
-var displayScores = function() {
+/*var displayScores = function() {
 
     $("scores_header").innerHTML = ("Score");
     $("names").innerHTML = ("Name");
@@ -67,7 +67,21 @@ var displayScores = function() {
       cell.innerHTML = names[i];
       cell2.innerHTML = scores[i];
     }
-  };
+  };*/
+
+  var  displayScores = function() {
+
+    var str = "<table>";
+    str += "<tr align='left'><th>Name</th><th>Score</th></tr>";
+    
+    for (var i = 0; i < scores.length; i++) {
+        str += "<tr><td>" + names[i] + "</td><td>" + scores[i] + "</td></tr>";
+    }
+    
+    str += "</table>";
+    $("scores_table").innerHTML = str;
+    
+}
 
 window.onload = function () {
     $("add").onclick = addScore;
